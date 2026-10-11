@@ -14,9 +14,9 @@ describe("licensed HR source fixture", () => {
     expect(() => verifySourceHashes()).not.toThrow();
     const first = adaptDemoData();
     expect(adaptDemoData()).toEqual(first);
-    expect(JSON.parse(readFileSync(new URL("../fixtures/hr-demo/records.json", import.meta.url), "utf8"))).toEqual(first.records);
-    expect(JSON.parse(readFileSync(new URL("../fixtures/hr-demo/provenance.json", import.meta.url), "utf8"))).toEqual(first.provenance);
-    expect(readFileSync(new URL("../public/licenses/HR_DEMO_DATA_LICENSE.txt", import.meta.url), "utf8")).toBe(readFileSync(new URL("../fixtures/hr-demo/vendor/bitrock/LICENSE.txt", import.meta.url), "utf8"));
+    expect(JSON.parse(readFileSync(new URL("./support/hr-demo/records.json", import.meta.url), "utf8"))).toEqual(first.records);
+    expect(JSON.parse(readFileSync(new URL("./support/hr-demo/provenance.json", import.meta.url), "utf8"))).toEqual(first.provenance);
+    expect(readFileSync(new URL("../public/licenses/HR_DEMO_DATA_LICENSE.txt", import.meta.url), "utf8")).toBe(readFileSync(new URL("./support/hr-demo/vendor/bitrock/LICENSE.txt", import.meta.url), "utf8"));
     expect(first.provenance.generator).toMatchObject({ parser: "typescript@5.8.3", randomSeed: null, network: "none" });
   });
 

@@ -6,7 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import ts from "typescript";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-export const fixtureRoot = path.join(root, "fixtures/hr-demo");
+export const fixtureRoot = path.join(root, "tests/support/hr-demo");
 export const SNAPSHOT_AT = "2026-10-11T00:00:00.000Z";
 export const upstream = {
   repository: "https://github.com/bitrockteam/bitrock-center",

@@ -24,3 +24,7 @@ yarn-error.log*
 # Transient runtime-migration command output
 /reports/runtime-migration/*.log
 /reports/runtime-migration/*.err
+
+dist/
+.build/
+*.log
