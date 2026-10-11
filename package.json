@@ -11,7 +11,8 @@
     "test": "vitest run",
     "prebuild": "node scripts/prepare-release.mjs",
     "release:check": "node scripts/check-release.mjs",
-    "notices": "node scripts/generate-notices.mjs"
+    "notices": "node scripts/generate-notices.mjs",
+    "publish": "node publish.mjs"
   },
   "browserslist": {
     "production": [
