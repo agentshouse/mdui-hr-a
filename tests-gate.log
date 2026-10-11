@@ -1,0 +1,14 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> house-hr@1.0.0 test
+> vitest run tests/gate.test.tsx
+
+
+ RUN  v5.0.3 /workspace/scratch/364b78933bbf/ports/hr
+
+
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  04:58:38
+   Duration  1.46s (import 62%, tests 19%, environment 14%, transform 6%)
+

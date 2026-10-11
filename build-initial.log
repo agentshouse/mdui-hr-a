@@ -1,0 +1,30 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> house-hr@1.0.0 prebuild
+> node scripts/prepare-release.mjs
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing distributed license text: @mui/x-virtualizer 0.4.2
+Missing distributed license text: inline-style-parser 0.1.1
+Missing distributed license text: remark-parse 9.0.0
+
+3 !== 0
+
+    at collectNotices (file:///workspace/scratch/364b78933bbf/ports/hr/scripts/generate-notices.mjs:149:10)
+    at generateNotices (file:///workspace/scratch/364b78933bbf/ports/hr/scripts/generate-notices.mjs:169:18)
+    at file:///workspace/scratch/364b78933bbf/ports/hr/scripts/prepare-release.mjs:15:28
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 3,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

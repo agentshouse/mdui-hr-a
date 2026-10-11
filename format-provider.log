@@ -1,0 +1,8 @@
+ports/hr/src/house.ts 155ms
+ports/hr/src/HouseGate.tsx 50ms
+ports/hr/src/house-context.tsx 4ms
+ports/hr/tests/house.test.ts 70ms
+ports/hr/tests/gate.test.tsx 20ms
+ports/hr/scripts/seed-data.mjs 25ms
+ports/hr/schema.yaml 19ms
+ports/hr/app.json 2ms

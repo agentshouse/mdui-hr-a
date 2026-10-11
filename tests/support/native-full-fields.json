@@ -1,0 +1,430 @@
+{
+  "runtimeVersion": "0.1.0-c2647c1a232dd",
+  "modelVersion": "0.1.0-c0bdbbc92d020",
+  "room": "r_hr_native_fixture",
+  "query": {
+    "types": [
+      "hr_team",
+      "hr_employee",
+      "hr_time_off"
+    ],
+    "select": {
+      "fields": "all",
+      "markdown": true
+    },
+    "orderBy": [
+      {
+        "by": "path",
+        "direction": "asc"
+      }
+    ]
+  },
+  "result": {
+    "documents": [
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/employees/donor-employee-1.md",
+        "type": "hr_employee",
+        "fields": {
+          "type": "hr_employee",
+          "id": "donor-employee-1",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "firstName": "Marco",
+          "lastName": "Rossi",
+          "jobTitle": "developer",
+          "email": "marco.rossi@example.test",
+          "availableAnnualLeaveDays": 25,
+          "teamId": "donor-team-1"
+        },
+        "markdown": "---\ntype: hr_employee\nid: \"donor-employee-1\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nfirstName: \"Marco\"\nlastName: \"Rossi\"\njobTitle: \"developer\"\nemail: \"marco.rossi@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"donor-team-1\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/employees/donor-employee-2.md",
+        "type": "hr_employee",
+        "fields": {
+          "type": "hr_employee",
+          "id": "donor-employee-2",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "firstName": "Laura",
+          "lastName": "Bianchi",
+          "jobTitle": "designer",
+          "email": "laura.bianchi@example.test",
+          "availableAnnualLeaveDays": 25,
+          "teamId": "donor-team-2"
+        },
+        "markdown": "---\ntype: hr_employee\nid: \"donor-employee-2\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nfirstName: \"Laura\"\nlastName: \"Bianchi\"\njobTitle: \"designer\"\nemail: \"laura.bianchi@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"donor-team-2\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/employees/donor-employee-3.md",
+        "type": "hr_employee",
+        "fields": {
+          "type": "hr_employee",
+          "id": "donor-employee-3",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "firstName": "Giovanni",
+          "lastName": "Verdi",
+          "jobTitle": "manager",
+          "email": "giovanni.verdi@example.test",
+          "availableAnnualLeaveDays": 25,
+          "teamId": "donor-team-3"
+        },
+        "markdown": "---\ntype: hr_employee\nid: \"donor-employee-3\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nfirstName: \"Giovanni\"\nlastName: \"Verdi\"\njobTitle: \"manager\"\nemail: \"giovanni.verdi@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"donor-team-3\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/employees/donor-employee-4.md",
+        "type": "hr_employee",
+        "fields": {
+          "type": "hr_employee",
+          "id": "donor-employee-4",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "firstName": "Francesca",
+          "lastName": "Neri",
+          "jobTitle": "admin",
+          "email": "francesca.neri@example.test",
+          "availableAnnualLeaveDays": 25,
+          "teamId": "donor-team-4"
+        },
+        "markdown": "---\ntype: hr_employee\nid: \"donor-employee-4\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nfirstName: \"Francesca\"\nlastName: \"Neri\"\njobTitle: \"admin\"\nemail: \"francesca.neri@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"donor-team-4\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/employees/donor-employee-5.md",
+        "type": "hr_employee",
+        "fields": {
+          "type": "hr_employee",
+          "id": "donor-employee-5",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "firstName": "Alessandro",
+          "lastName": "Gialli",
+          "jobTitle": "developer",
+          "email": "alessandro.gialli@example.test",
+          "availableAnnualLeaveDays": 25,
+          "teamId": "donor-team-1"
+        },
+        "markdown": "---\ntype: hr_employee\nid: \"donor-employee-5\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nfirstName: \"Alessandro\"\nlastName: \"Gialli\"\njobTitle: \"developer\"\nemail: \"alessandro.gialli@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"donor-team-1\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/teams/donor-team-1.md",
+        "type": "hr_team",
+        "fields": {
+          "type": "hr_team",
+          "id": "donor-team-1",
+          "name": "Role group: developer"
+        },
+        "markdown": "---\ntype: hr_team\nid: \"donor-team-1\"\nname: \"Role group: developer\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/teams/donor-team-2.md",
+        "type": "hr_team",
+        "fields": {
+          "type": "hr_team",
+          "id": "donor-team-2",
+          "name": "Role group: designer"
+        },
+        "markdown": "---\ntype: hr_team\nid: \"donor-team-2\"\nname: \"Role group: designer\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/teams/donor-team-3.md",
+        "type": "hr_team",
+        "fields": {
+          "type": "hr_team",
+          "id": "donor-team-3",
+          "name": "Role group: manager"
+        },
+        "markdown": "---\ntype: hr_team\nid: \"donor-team-3\"\nname: \"Role group: manager\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/teams/donor-team-4.md",
+        "type": "hr_team",
+        "fields": {
+          "type": "hr_team",
+          "id": "donor-team-4",
+          "name": "Role group: admin"
+        },
+        "markdown": "---\ntype: hr_team\nid: \"donor-team-4\"\nname: \"Role group: admin\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-1.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-1",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Annual",
+          "startsAt": "2026-10-15",
+          "endsAt": "2026-10-22",
+          "status": "Pending",
+          "notes": "Vacanza estiva"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-1\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-10-15\"\nendsAt: \"2026-10-22\"\nstatus: \"Pending\"\nnotes: \"Vacanza estiva\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-10.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-10",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Casual",
+          "startsAt": "2026-09-03",
+          "endsAt": "2026-09-03",
+          "status": "Approved",
+          "notes": "Trasloco"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-10\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Casual\"\nstartsAt: \"2026-09-03\"\nendsAt: \"2026-09-03\"\nstatus: \"Approved\"\nnotes: \"Trasloco\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-11.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-11",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Annual",
+          "startsAt": "2026-08-28",
+          "endsAt": "2026-09-02",
+          "status": "Approved",
+          "notes": "Ponte festivo"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-11\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-08-28\"\nendsAt: \"2026-09-02\"\nstatus: \"Approved\"\nnotes: \"Ponte festivo\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-12.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-12",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Sick",
+          "startsAt": "2026-08-15",
+          "endsAt": "2026-08-17",
+          "status": "Approved",
+          "notes": "Febbre"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-12\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Sick\"\nstartsAt: \"2026-08-15\"\nendsAt: \"2026-08-17\"\nstatus: \"Approved\"\nnotes: \"Febbre\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-13.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-13",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Casual",
+          "startsAt": "2026-08-10",
+          "endsAt": "2026-08-10",
+          "status": "Approved",
+          "notes": "Visita specialistica"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-13\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Casual\"\nstartsAt: \"2026-08-10\"\nendsAt: \"2026-08-10\"\nstatus: \"Approved\"\nnotes: \"Visita specialistica\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-14.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-14",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Annual",
+          "startsAt": "2026-08-05",
+          "endsAt": "2026-08-09",
+          "status": "Approved",
+          "notes": "Vacanza primaverile"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-14\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-08-05\"\nendsAt: \"2026-08-09\"\nstatus: \"Approved\"\nnotes: \"Vacanza primaverile\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-15.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-15",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Casual",
+          "startsAt": "2026-07-22",
+          "endsAt": "2026-07-22",
+          "status": "Approved",
+          "notes": "Matrimonio amico"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-15\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Casual\"\nstartsAt: \"2026-07-22\"\nendsAt: \"2026-07-22\"\nstatus: \"Approved\"\nnotes: \"Matrimonio amico\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-2.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-2",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Casual",
+          "startsAt": "2026-10-05",
+          "endsAt": "2026-10-05",
+          "status": "Approved",
+          "notes": "Visita medica"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-2\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Casual\"\nstartsAt: \"2026-10-05\"\nendsAt: \"2026-10-05\"\nstatus: \"Approved\"\nnotes: \"Visita medica\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-3.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-3",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Sick",
+          "startsAt": "2026-10-20",
+          "endsAt": "2026-10-22",
+          "status": "Approved",
+          "notes": "Influenza"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-3\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Sick\"\nstartsAt: \"2026-10-20\"\nendsAt: \"2026-10-22\"\nstatus: \"Approved\"\nnotes: \"Influenza\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-4.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-4",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Annual",
+          "startsAt": "2026-10-10",
+          "endsAt": "2026-10-14",
+          "status": "Approved",
+          "notes": "Vacanza"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-4\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-10-10\"\nendsAt: \"2026-10-14\"\nstatus: \"Approved\"\nnotes: \"Vacanza\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-5.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-5",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-2",
+          "timeOffType": "Casual",
+          "startsAt": "2026-10-08",
+          "endsAt": "2026-10-08",
+          "status": "Approved",
+          "notes": "Motivi personali"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-5\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-2\"\ntimeOffType: \"Casual\"\nstartsAt: \"2026-10-08\"\nendsAt: \"2026-10-08\"\nstatus: \"Approved\"\nnotes: \"Motivi personali\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-6.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-6",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Annual",
+          "startsAt": "2026-10-01",
+          "endsAt": "2026-10-07",
+          "status": "Approved",
+          "notes": "Ferie natalizie"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-6\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-10-01\"\nendsAt: \"2026-10-07\"\nstatus: \"Approved\"\nnotes: \"Ferie natalizie\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-7.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-7",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Casual",
+          "startsAt": "2026-09-12",
+          "endsAt": "2026-09-12",
+          "status": "Rejected",
+          "notes": "Appuntamento bancario"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-7\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Casual\"\nstartsAt: \"2026-09-12\"\nendsAt: \"2026-09-12\"\nstatus: \"Rejected\"\nnotes: \"Appuntamento bancario\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-8.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-8",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Sick",
+          "startsAt": "2026-09-25",
+          "endsAt": "2026-09-25",
+          "status": "Approved",
+          "notes": "Mal di testa"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-8\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Sick\"\nstartsAt: \"2026-09-25\"\nendsAt: \"2026-09-25\"\nstatus: \"Approved\"\nnotes: \"Mal di testa\"\n---\n"
+      },
+      {
+        "room": "r_hr_native_fixture",
+        "path": "hr/time-offs/donor-time-off-9.md",
+        "type": "hr_time_off",
+        "fields": {
+          "type": "hr_time_off",
+          "id": "donor-time-off-9",
+          "createdAt": "2026-10-11T00:00:00.000Z",
+          "updatedAt": "2026-10-11T00:00:00.000Z",
+          "employeeId": "donor-employee-1",
+          "timeOffType": "Annual",
+          "startsAt": "2026-09-18",
+          "endsAt": "2026-09-20",
+          "status": "Pending",
+          "notes": "Weekend lungo"
+        },
+        "markdown": "---\ntype: hr_time_off\nid: \"donor-time-off-9\"\ncreatedAt: \"2026-10-11T00:00:00.000Z\"\nupdatedAt: \"2026-10-11T00:00:00.000Z\"\nemployeeId: \"donor-employee-1\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-09-18\"\nendsAt: \"2026-09-20\"\nstatus: \"Pending\"\nnotes: \"Weekend lungo\"\n---\n"
+      }
+    ]
+  }
+}

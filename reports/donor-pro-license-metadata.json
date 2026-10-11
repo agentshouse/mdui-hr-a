@@ -1,0 +1,9 @@
+{
+  "version": "7.23.3",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "url": "git+https://github.com/mui/mui-x.git",
+    "type": "git",
+    "directory": "packages/x-date-pickers-pro"
+  }
+}

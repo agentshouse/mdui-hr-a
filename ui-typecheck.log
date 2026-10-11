@@ -1,0 +1,27 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> house-hr@1.0.0 typecheck
+> tsc --noEmit
+
+src/components/input/date-starts-ends.tsx(34,192): error TS2322: Type '(props: PickersDayProps<Dayjs>) => { sx: { "&.Mui-selected": { bgcolor: string; color: string; "&:hover": { bgcolor: string; }; }; bgcolor?: string | undefined; borderRadius: string; }; }' is not assignable to type 'SlotComponentPropsFromProps<PickersDayProps<Dayjs>, {}, DayCalendarProps<Dayjs> & { day: Dayjs; selected: boolean; }> | undefined'.
+  Type '(props: PickersDayProps<Dayjs>) => { sx: { "&.Mui-selected": { bgcolor: string; color: string; "&:hover": { bgcolor: string; }; }; bgcolor?: string | undefined; borderRadius: string; }; }' is not assignable to type '(ownerState: DayCalendarProps<Dayjs> & { day: Dayjs; selected: boolean; }) => Partial<PickersDayProps<Dayjs>>'.
+    Types of parameters 'props' and 'ownerState' are incompatible.
+      Type 'DayCalendarProps<Dayjs> & { day: Dayjs; selected: boolean; }' is missing the following properties from type 'PickersDayProps<Dayjs>': onDaySelect, outsideCurrentMonth, isFirstVisibleCell, isLastVisibleCell
+src/components/input/date-starts-ends.tsx(38,227): error TS2322: Type '(props: PickersDayProps<Dayjs>) => { sx: { "&.Mui-selected": { bgcolor: string; color: string; "&:hover": { bgcolor: string; }; }; bgcolor?: string | undefined; borderRadius: string; }; }' is not assignable to type 'SlotComponentPropsFromProps<PickersDayProps<Dayjs>, {}, DayCalendarProps<Dayjs> & { day: Dayjs; selected: boolean; }> | undefined'.
+  Type '(props: PickersDayProps<Dayjs>) => { sx: { "&.Mui-selected": { bgcolor: string; color: string; "&:hover": { bgcolor: string; }; }; bgcolor?: string | undefined; borderRadius: string; }; }' is not assignable to type '(ownerState: DayCalendarProps<Dayjs> & { day: Dayjs; selected: boolean; }) => Partial<PickersDayProps<Dayjs>>'.
+    Types of parameters 'props' and 'ownerState' are incompatible.
+      Type 'DayCalendarProps<Dayjs> & { day: Dayjs; selected: boolean; }' is missing the following properties from type 'PickersDayProps<Dayjs>': onDaySelect, outsideCurrentMonth, isFirstVisibleCell, isLastVisibleCell
+src/house.ts(143,418): error TS2540: Cannot assign to 'fields' because it is a read-only property.
+src/providers/notification-provider/index.tsx(11,9): error TS2345: Argument of type '({ id, duration }: { id: string; duration: number; }) => JSX.Element' is not assignable to parameter of type 'Message'.
+  Type '({ id, duration }: { id: string; duration: number; }) => JSX.Element' is not assignable to type 'ValueFunction<Renderable, Toast>'.
+    Types of parameters '__0' and 'arg' are incompatible.
+      Type 'Toast' is not assignable to type '{ id: string; duration: number; }'.
+        Types of property 'duration' are incompatible.
+          Type 'number | undefined' is not assignable to type 'number'.
+            Type 'undefined' is not assignable to type 'number'.
+vite.config.ts(5,45): error TS2307: Cannot find module './scripts/strip-external-features' or its corresponding type declarations.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

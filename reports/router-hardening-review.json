@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-11",
+  "from": "7.17.0",
+  "to": "7.18.2",
+  "advisories": [
+    "https://github.com/remix-run/react-router/security/advisories/GHSA-wrjc-x8rr-h8h6",
+    "https://github.com/remix-run/react-router/security/advisories/GHSA-qwww-vcr4-c8h2"
+  ],
+  "review": "loadRouteModule is byte-identical; existing refusal and hash remain unchanged. RSCErrorHandler now computes a target and rejects invalid protocols before browser navigation or meta refresh. HR does not use RSC and continues replacing that entire optional handler with its prior fail-closed refusal. Only the exact new module filename/version/AST hash are adopted, with all match-count and source/version drift guards preserved.",
+  "productionClaim": "Version hardening. Fixed internal routes and validated IDs; no production RSC server/API and no demonstrated exploit.",
+  "sources": [
+    {
+      "name": "loadRouteModule",
+      "before": "async function loadRouteModule(route, routeModulesCache) {\n  if (route.id in routeModulesCache) {\n    return routeModulesCache[route.id];\n  }\n  try {\n    let routeModule = await import(\n      /* @vite-ignore */\n      /* webpackIgnore: true */\n      route.module\n    );\n    routeModulesCache[route.id] = routeModule;\n    return routeModule;\n  } catch (error) {\n    console.error(\n      `Error loading route module \\`${route.module}\\`, reloading page...`\n    );\n    console.error(error);\n    if (window.__reactRouterContext && window.__reactRouterContext.isSpaMode && // @ts-expect-error\n    import.meta.hot) {\n      throw error;\n    }\n    window.location.reload();\n    return new Promise(() => {\n    });\n  }\n}",
+      "after": "async function loadRouteModule(route, routeModulesCache) {\n  if (route.id in routeModulesCache) {\n    return routeModulesCache[route.id];\n  }\n  try {\n    let routeModule = await import(\n      /* @vite-ignore */\n      /* webpackIgnore: true */\n      route.module\n    );\n    routeModulesCache[route.id] = routeModule;\n    return routeModule;\n  } catch (error) {\n    console.error(\n      `Error loading route module \\`${route.module}\\`, reloading page...`\n    );\n    console.error(error);\n    if (window.__reactRouterContext && window.__reactRouterContext.isSpaMode && // @ts-expect-error\n    import.meta.hot) {\n      throw error;\n    }\n    window.location.reload();\n    return new Promise(() => {\n    });\n  }\n}",
+      "unchanged": true,
+      "beforeSha256": "0a5332223eb6334c71f9af26aedf144328c2e1d30731e76eea5b8e2192579999",
+      "afterSha256": "0a5332223eb6334c71f9af26aedf144328c2e1d30731e76eea5b8e2192579999"
+    },
+    {
+      "name": "RSCErrorHandler",
+      "before": "function RSCErrorHandler({\n  children,\n  error\n}) {\n  let { basename } = React2.useContext(NavigationContext);\n  if (typeof error === \"object\" && error && \"digest\" in error && typeof error.digest === \"string\") {\n    let redirect2 = decodeRedirectErrorDigest(error.digest);\n    if (redirect2) {\n      let existingRedirect = errorRedirectHandledMap.get(error);\n      if (existingRedirect) throw existingRedirect;\n      let parsed = parseToInfo(redirect2.location, basename);\n      if (isBrowser && !errorRedirectHandledMap.get(error)) {\n        if (parsed.isExternal || redirect2.reloadDocument) {\n          window.location.href = parsed.absoluteURL || parsed.to;\n        } else {\n          const redirectPromise = Promise.resolve().then(\n            () => window.__reactRouterDataRouter.navigate(parsed.to, {\n              replace: redirect2.replace\n            })\n          );\n          errorRedirectHandledMap.set(error, redirectPromise);\n          throw redirectPromise;\n        }\n      }\n      return /* @__PURE__ */ React2.createElement(\n        \"meta\",\n        {\n          httpEquiv: \"refresh\",\n          content: `0;url=${parsed.absoluteURL || parsed.to}`\n        }\n      );\n    }\n  }\n  return children;\n}",
+      "after": "function RSCErrorHandler({\n  children,\n  error\n}) {\n  let { basename } = React2.useContext(NavigationContext);\n  if (typeof error === \"object\" && error && \"digest\" in error && typeof error.digest === \"string\") {\n    let redirect2 = decodeRedirectErrorDigest(error.digest);\n    if (redirect2) {\n      let existingRedirect = errorRedirectHandledMap.get(error);\n      if (existingRedirect) throw existingRedirect;\n      let parsed = parseToInfo(redirect2.location, basename);\n      let target = parsed.absoluteURL || parsed.to;\n      if (hasInvalidProtocol(target)) {\n        throw new Error(\"Invalid redirect location\");\n      }\n      if (isBrowser && !errorRedirectHandledMap.get(error)) {\n        if (parsed.isExternal || redirect2.reloadDocument) {\n          window.location.href = target;\n        } else {\n          const redirectPromise = Promise.resolve().then(\n            () => window.__reactRouterDataRouter.navigate(parsed.to, {\n              replace: redirect2.replace\n            })\n          );\n          errorRedirectHandledMap.set(error, redirectPromise);\n          throw redirectPromise;\n        }\n      }\n      return /* @__PURE__ */ React2.createElement(\"meta\", { httpEquiv: \"refresh\", content: `0;url=${target}` });\n    }\n  }\n  return children;\n}",
+      "unchanged": false,
+      "beforeSha256": "624146740156b6eb466016b74cf6d03ec31ce27c2257a220db762020fa3340bb",
+      "afterSha256": "00014b781d9e49ba065a4d1f8e0748c4837d66c24bb2b93a78dc614ed933b3d6"
+    }
+  ]
+}

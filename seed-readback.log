@@ -1,0 +1,283 @@
+types:
+  hr_team:
+    fields:
+      id: { kind: string, required: true }
+      name: { kind: string, required: true }
+  hr_employee:
+    fields:
+      id: { kind: string, required: true }
+      createdAt: { kind: string, required: true }
+      updatedAt: { kind: string, required: true }
+      firstName: { kind: string, required: true }
+      lastName: { kind: string, required: true }
+      jobTitle: { kind: string, required: true }
+      email: { kind: string, required: true }
+      availableAnnualLeaveDays: { kind: number, required: true }
+      teamId: { kind: string, required: true }
+  hr_time_off:
+    fields:
+      id: { kind: string, required: true }
+      createdAt: { kind: string, required: true }
+      updatedAt: { kind: string, required: true }
+      employeeId: { kind: string, required: true }
+      timeOffType: { kind: enum, values: [Annual, Sick, Casual], required: true }
+      startsAt: { kind: string, required: true }
+      endsAt: { kind: string, required: true }
+      notes: { kind: string }
+      status: { kind: enum, values: [Pending, Approved, Rejected], required: true }
+---
+type: hr_team
+id: "team-1"
+name: "Product"
+---
+---
+type: hr_team
+id: "team-2"
+name: "Operations"
+---
+---
+type: hr_team
+id: "team-3"
+name: "Design"
+---
+---
+type: hr_employee
+id: "employee-1"
+createdAt: "2026-10-01T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+firstName: "Ada"
+lastName: "Rowan"
+jobTitle: "Product designer"
+email: "ada.rowan@example.test"
+availableAnnualLeaveDays: 25
+teamId: "team-1"
+---
+---
+type: hr_employee
+id: "employee-2"
+createdAt: "2026-10-01T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+firstName: "Milo"
+lastName: "Brooks"
+jobTitle: "People coordinator"
+email: "milo.brooks@example.test"
+availableAnnualLeaveDays: 25
+teamId: "team-2"
+---
+---
+type: hr_employee
+id: "employee-3"
+createdAt: "2026-10-01T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+firstName: "Nora"
+lastName: "Vale"
+jobTitle: "Frontend engineer"
+email: "nora.vale@example.test"
+availableAnnualLeaveDays: 25
+teamId: "team-3"
+---
+---
+type: hr_employee
+id: "employee-4"
+createdAt: "2026-10-01T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+firstName: "Owen"
+lastName: "Reed"
+jobTitle: "Operations specialist"
+email: "owen.reed@example.test"
+availableAnnualLeaveDays: 25
+teamId: "team-1"
+---
+---
+type: hr_employee
+id: "employee-5"
+createdAt: "2026-10-01T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+firstName: "Lina"
+lastName: "Stone"
+jobTitle: "Researcher"
+email: "lina.stone@example.test"
+availableAnnualLeaveDays: 25
+teamId: "team-2"
+---
+---
+type: hr_employee
+id: "employee-6"
+createdAt: "2026-10-01T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+firstName: "Theo"
+lastName: "Park"
+jobTitle: "Support specialist"
+email: "theo.park@example.test"
+availableAnnualLeaveDays: 25
+teamId: "team-3"
+---
+---
+type: hr_time_off
+id: "time-off-1"
+createdAt: "2026-09-20T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-1"
+timeOffType: "Annual"
+startsAt: "2026-10-19"
+endsAt: "2026-10-23"
+status: "Pending"
+notes: "Autumn break requested."
+---
+---
+type: hr_time_off
+id: "time-off-2"
+createdAt: "2026-09-21T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-1"
+timeOffType: "Annual"
+startsAt: "2026-11-09"
+endsAt: "2026-11-11"
+status: "Approved"
+notes: "Scheduled personal time."
+---
+---
+type: hr_time_off
+id: "time-off-3"
+createdAt: "2026-09-22T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-1"
+timeOffType: "Casual"
+startsAt: "2026-09-15"
+endsAt: "2026-09-15"
+status: "Approved"
+notes: "Personal appointment."
+---
+---
+type: hr_time_off
+id: "time-off-4"
+createdAt: "2026-09-23T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-2"
+timeOffType: "Annual"
+startsAt: "2026-10-26"
+endsAt: "2026-10-30"
+status: "Pending"
+notes: "Family visit."
+---
+---
+type: hr_time_off
+id: "time-off-5"
+createdAt: "2026-09-24T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-2"
+timeOffType: "Casual"
+startsAt: "2026-08-13"
+endsAt: "2026-08-14"
+status: "Approved"
+notes: "Personal time."
+---
+---
+type: hr_time_off
+id: "time-off-6"
+createdAt: "2026-09-25T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-3"
+timeOffType: "Sick"
+startsAt: "2026-09-21"
+endsAt: "2026-09-22"
+status: "Approved"
+notes: "Synthetic leave record."
+---
+---
+type: hr_time_off
+id: "time-off-7"
+createdAt: "2026-09-26T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-3"
+timeOffType: "Annual"
+startsAt: "2026-12-14"
+endsAt: "2026-12-18"
+status: "Pending"
+notes: "Winter break."
+---
+---
+type: hr_time_off
+id: "time-off-8"
+createdAt: "2026-09-27T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-4"
+timeOffType: "Annual"
+startsAt: "2026-10-15"
+endsAt: "2026-10-16"
+status: "Approved"
+notes: "Long weekend."
+---
+---
+type: hr_time_off
+id: "time-off-9"
+createdAt: "2026-09-28T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-4"
+timeOffType: "Casual"
+startsAt: "2026-09-17"
+endsAt: "2026-09-17"
+status: "Rejected"
+notes: "Requested dates were changed."
+---
+---
+type: hr_time_off
+id: "time-off-10"
+createdAt: "2026-09-29T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-5"
+timeOffType: "Annual"
+startsAt: "2026-11-02"
+endsAt: "2026-11-06"
+status: "Pending"
+notes: "Personal time requested."
+---
+---
+type: hr_time_off
+id: "time-off-11"
+createdAt: "2026-09-20T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-5"
+timeOffType: "Annual"
+startsAt: "2026-07-20"
+endsAt: "2026-07-24"
+status: "Approved"
+notes: "Summer break."
+---
+---
+type: hr_time_off
+id: "time-off-12"
+createdAt: "2026-09-21T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-6"
+timeOffType: "Casual"
+startsAt: "2026-10-20"
+endsAt: "2026-10-20"
+status: "Pending"
+notes: "Personal appointment."
+---
+---
+type: hr_time_off
+id: "time-off-13"
+createdAt: "2026-09-22T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-6"
+timeOffType: "Annual"
+startsAt: "2026-10-28"
+endsAt: "2026-10-30"
+status: "Approved"
+notes: "Scheduled personal time."
+---
+---
+type: hr_time_off
+id: "time-off-14"
+createdAt: "2026-09-23T09:00:00.000Z"
+updatedAt: "2026-10-01T09:00:00.000Z"
+employeeId: "employee-6"
+timeOffType: "Sick"
+startsAt: "2026-08-03"
+endsAt: "2026-08-04"
+status: "Approved"
+notes: "Synthetic leave record."
+---
+

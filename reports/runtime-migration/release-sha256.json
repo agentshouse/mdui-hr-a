@@ -1,0 +1,113 @@
+{
+  "algorithm": "SHA-256 of newline-terminated sorted file-hash/path manifest",
+  "releaseDigest": "656aac15b527bea0bfa9b04984e645246f1cf6229d6d3dc70475777ee8057b05",
+  "files": 21,
+  "bytes": 1696589,
+  "entries": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1079,
+      "sha256": "ae616936d77df09838b97cb6d4a41921bcd47b676fe9ce623a5ee4cdbb1db91f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 341550,
+      "sha256": "1f1b273cd6b90a502acdddb5b8fd91373d9134c3f017139510420ca17600da50"
+    },
+    {
+      "path": "app.json",
+      "bytes": 165,
+      "sha256": "77f0a82b4ada3ba05ed852d73e5127331129df5c83e58ab009beb80685546d0c"
+    },
+    {
+      "path": "assets/index-CiEnkQiB.css",
+      "bytes": 1797,
+      "sha256": "a02a86eb29e0bd329aa441c6662d8ffd412f3c634b78b2db7973db8910aaaae8"
+    },
+    {
+      "path": "assets/index-lN6ZACwe.js",
+      "bytes": 1116117,
+      "sha256": "1726b957bb9e4d84eb733a1f6d62cad2ac23a53a7ae6e3194e54ea25f4c0bdd7"
+    },
+    {
+      "path": "assets/inter-latin-400-normal-C38fXH4l.woff2",
+      "bytes": 23664,
+      "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+    },
+    {
+      "path": "assets/inter-latin-400-normal-CyCys3Eg.woff",
+      "bytes": 30696,
+      "sha256": "e20fa0b4fd2dd26e4d14b3ac3cc922509c3a63fa5e910e90c614544aa042dd45"
+    },
+    {
+      "path": "assets/inter-latin-500-normal-BL9OpVg8.woff",
+      "bytes": 31284,
+      "sha256": "9b42c108da48b5ed55a3072e815ffee2d271562e6c0dd6998910e8f9c09e0a3d"
+    },
+    {
+      "path": "assets/inter-latin-500-normal-Cerq10X2.woff2",
+      "bytes": 24272,
+      "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+    },
+    {
+      "path": "assets/inter-latin-600-normal-CiBQ2DWP.woff",
+      "bytes": 31260,
+      "sha256": "6a9cb3a509b4eeaf12b7dda6c4aacac3e85d07f4201bf4dd716e332e692b87bd"
+    },
+    {
+      "path": "assets/inter-latin-600-normal-LgqL8muc.woff2",
+      "bytes": 24452,
+      "sha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a"
+    },
+    {
+      "path": "assets/inter-latin-700-normal-BLAVimhd.woff",
+      "bytes": 31320,
+      "sha256": "7c5ed5655730de337704d3fc94628515cd7e3d8d32368871709bf56ac0397e7a"
+    },
+    {
+      "path": "assets/inter-latin-700-normal-Yt3aPRUw.woff2",
+      "bytes": 24356,
+      "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491"
+    },
+    {
+      "path": "index.html",
+      "bytes": 597,
+      "sha256": "eca100b28082a25685fda62e348d64d5f132c233deabc329d12381177a08dabc"
+    },
+    {
+      "path": "licenses/PROVENANCE.txt",
+      "bytes": 3542,
+      "sha256": "754fdd2b165d8471b2976df22c0f6cae109a7cc6e2bb0d69bbd3453eb5479c9e"
+    },
+    {
+      "path": "licenses/cfworker-json-schema-MIT.txt",
+      "bytes": 1070,
+      "sha256": "376944252ab78ca6b41aee44ddea8894927ee67891e77e61eb9d59af63e35094"
+    },
+    {
+      "path": "licenses/inline-style-parser-MIT.txt",
+      "bytes": 1098,
+      "sha256": "395c95f20598da653ff1eb1cb9d74947c7fac689697147f1d192fd0242a0e635"
+    },
+    {
+      "path": "licenses/inter-OFL.txt",
+      "bytes": 4477,
+      "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+    },
+    {
+      "path": "licenses/mui-x-virtualizer-MIT.txt",
+      "bytes": 1072,
+      "sha256": "619b16f56e57883d2213612363fa2faa6f5b43ec9e73b5009cbac8f7001e94aa"
+    },
+    {
+      "path": "licenses/remark-parse-MIT.txt",
+      "bytes": 1176,
+      "sha256": "50b4b8729371c8224f2178cb293b438da44763ac98447e2f184231339dc46c78"
+    },
+    {
+      "path": "schema.yaml",
+      "bytes": 1545,
+      "sha256": "f8c21defbe5be763048726fa1d3da1d315d2fb2b6754b6b5fc46410510f5d1a5"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "name": "house-hr",
+  "dependencies": {
+    "@refinedev/mui": {
+      "version": "8.0.2",
+      "resolved": "https://registry.npmjs.org/@refinedev/mui/-/mui-8.0.2.tgz",
+      "overridden": false,
+      "dependencies": {
+        "@mui/lab": {
+          "version": "6.0.0-dev.20240529-082515-213b5e33ab",
+          "resolved": "https://registry.npmjs.org/@mui/lab/-/lab-6.0.0-dev.20240529-082515-213b5e33ab.tgz",
+          "overridden": false
+        },
+        "notistack": {
+          "version": "2.0.8",
+          "resolved": "https://registry.npmjs.org/notistack/-/notistack-2.0.8.tgz",
+          "overridden": false
+        }
+      }
+    }
+  }
+}

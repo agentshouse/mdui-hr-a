@@ -1,0 +1,124 @@
+{
+  "changes": [
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/settings/schema.yaml",
+      "content": "types:\n  hr_team:\n    fields:\n      id: { kind: string, required: true }\n      name: { kind: string, required: true }\n  hr_employee:\n    fields:\n      id: { kind: string, required: true }\n      createdAt: { kind: string, required: true }\n      updatedAt: { kind: string, required: true }\n      firstName: { kind: string, required: true }\n      lastName: { kind: string, required: true }\n      jobTitle: { kind: string, required: true }\n      email: { kind: string, required: true }\n      availableAnnualLeaveDays: { kind: number, required: true }\n      teamId: { kind: string, required: true }\n  hr_time_off:\n    fields:\n      id: { kind: string, required: true }\n      createdAt: { kind: string, required: true }\n      updatedAt: { kind: string, required: true }\n      employeeId: { kind: string, required: true }\n      timeOffType: { kind: enum, values: [Annual, Sick, Casual], required: true }\n      startsAt: { kind: string, required: true }\n      endsAt: { kind: string, required: true }\n      notes: { kind: string }\n      status: { kind: enum, values: [Pending, Approved, Rejected], required: true }\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/teams/team-1.md",
+      "content": "---\ntype: hr_team\nid: \"team-1\"\nname: \"Product\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/teams/team-2.md",
+      "content": "---\ntype: hr_team\nid: \"team-2\"\nname: \"Operations\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/teams/team-3.md",
+      "content": "---\ntype: hr_team\nid: \"team-3\"\nname: \"Design\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/employees/employee-1.md",
+      "content": "---\ntype: hr_employee\nid: \"employee-1\"\ncreatedAt: \"2026-10-01T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nfirstName: \"Ada\"\nlastName: \"Rowan\"\njobTitle: \"Product designer\"\nemail: \"ada.rowan@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"team-1\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/employees/employee-2.md",
+      "content": "---\ntype: hr_employee\nid: \"employee-2\"\ncreatedAt: \"2026-10-01T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nfirstName: \"Milo\"\nlastName: \"Brooks\"\njobTitle: \"People coordinator\"\nemail: \"milo.brooks@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"team-2\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/employees/employee-3.md",
+      "content": "---\ntype: hr_employee\nid: \"employee-3\"\ncreatedAt: \"2026-10-01T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nfirstName: \"Nora\"\nlastName: \"Vale\"\njobTitle: \"Frontend engineer\"\nemail: \"nora.vale@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"team-3\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/employees/employee-4.md",
+      "content": "---\ntype: hr_employee\nid: \"employee-4\"\ncreatedAt: \"2026-10-01T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nfirstName: \"Owen\"\nlastName: \"Reed\"\njobTitle: \"Operations specialist\"\nemail: \"owen.reed@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"team-1\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/employees/employee-5.md",
+      "content": "---\ntype: hr_employee\nid: \"employee-5\"\ncreatedAt: \"2026-10-01T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nfirstName: \"Lina\"\nlastName: \"Stone\"\njobTitle: \"Researcher\"\nemail: \"lina.stone@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"team-2\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/employees/employee-6.md",
+      "content": "---\ntype: hr_employee\nid: \"employee-6\"\ncreatedAt: \"2026-10-01T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nfirstName: \"Theo\"\nlastName: \"Park\"\njobTitle: \"Support specialist\"\nemail: \"theo.park@example.test\"\navailableAnnualLeaveDays: 25\nteamId: \"team-3\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-1.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-1\"\ncreatedAt: \"2026-09-20T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-1\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-10-19\"\nendsAt: \"2026-10-23\"\nstatus: \"Pending\"\nnotes: \"Autumn break requested.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-2.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-2\"\ncreatedAt: \"2026-09-21T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-1\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-11-09\"\nendsAt: \"2026-11-11\"\nstatus: \"Approved\"\nnotes: \"Scheduled personal time.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-3.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-3\"\ncreatedAt: \"2026-09-22T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-1\"\ntimeOffType: \"Casual\"\nstartsAt: \"2026-09-15\"\nendsAt: \"2026-09-15\"\nstatus: \"Approved\"\nnotes: \"Personal appointment.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-4.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-4\"\ncreatedAt: \"2026-09-23T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-2\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-10-26\"\nendsAt: \"2026-10-30\"\nstatus: \"Pending\"\nnotes: \"Family visit.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-5.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-5\"\ncreatedAt: \"2026-09-24T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-2\"\ntimeOffType: \"Casual\"\nstartsAt: \"2026-08-13\"\nendsAt: \"2026-08-14\"\nstatus: \"Approved\"\nnotes: \"Personal time.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-6.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-6\"\ncreatedAt: \"2026-09-25T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-3\"\ntimeOffType: \"Sick\"\nstartsAt: \"2026-09-21\"\nendsAt: \"2026-09-22\"\nstatus: \"Approved\"\nnotes: \"Synthetic leave record.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-7.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-7\"\ncreatedAt: \"2026-09-26T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-3\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-12-14\"\nendsAt: \"2026-12-18\"\nstatus: \"Pending\"\nnotes: \"Winter break.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-8.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-8\"\ncreatedAt: \"2026-09-27T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-4\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-10-15\"\nendsAt: \"2026-10-16\"\nstatus: \"Approved\"\nnotes: \"Long weekend.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-9.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-9\"\ncreatedAt: \"2026-09-28T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-4\"\ntimeOffType: \"Casual\"\nstartsAt: \"2026-09-17\"\nendsAt: \"2026-09-17\"\nstatus: \"Rejected\"\nnotes: \"Requested dates were changed.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-10.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-10\"\ncreatedAt: \"2026-09-29T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-5\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-11-02\"\nendsAt: \"2026-11-06\"\nstatus: \"Pending\"\nnotes: \"Personal time requested.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-11.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-11\"\ncreatedAt: \"2026-09-20T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-5\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-07-20\"\nendsAt: \"2026-07-24\"\nstatus: \"Approved\"\nnotes: \"Summer break.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-12.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-12\"\ncreatedAt: \"2026-09-21T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-6\"\ntimeOffType: \"Casual\"\nstartsAt: \"2026-10-20\"\nendsAt: \"2026-10-20\"\nstatus: \"Pending\"\nnotes: \"Personal appointment.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-13.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-13\"\ncreatedAt: \"2026-09-22T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-6\"\ntimeOffType: \"Annual\"\nstartsAt: \"2026-10-28\"\nendsAt: \"2026-10-30\"\nstatus: \"Approved\"\nnotes: \"Scheduled personal time.\"\n---\n"
+    },
+    {
+      "op": "create",
+      "path": "/rooms/hr-port/hr/time-offs/time-off-14.md",
+      "content": "---\ntype: hr_time_off\nid: \"time-off-14\"\ncreatedAt: \"2026-09-23T09:00:00.000Z\"\nupdatedAt: \"2026-10-01T09:00:00.000Z\"\nemployeeId: \"employee-6\"\ntimeOffType: \"Sick\"\nstartsAt: \"2026-08-03\"\nendsAt: \"2026-08-04\"\nstatus: \"Approved\"\nnotes: \"Synthetic leave record.\"\n---\n"
+    }
+  ]
+}

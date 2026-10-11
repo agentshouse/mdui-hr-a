@@ -1,0 +1,10 @@
+{
+  "entry": "index.html",
+  "room_slots": [
+    {
+      "name": "hr",
+      "access": "write",
+      "types": ["hr_team", "hr_employee", "hr_time_off"]
+    }
+  ]
+}
