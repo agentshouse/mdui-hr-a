@@ -19,7 +19,7 @@ import {
   type Resource,
   type Row,
 } from "../src/house";
-vi.mock("@agentshouse/app-bridge", () => ({ connectHouseBridge: vi.fn() }));
+vi.mock("@agentshouse/app-bridge", () => ({ houseBridge: vi.fn() }));
 const ROOM = "house://hr-test";
 const stamp = "2026-10-01T09:00:00.000Z";
 const team = { id: "team-1", name: "Design" };

@@ -1,6 +1,6 @@
-import { connectHouseBridge } from "@agentshouse/app-bridge";
+import { houseBridge } from "@agentshouse/app-bridge";
 import type { DataProvider, CrudFilters, CrudSorting } from "@refinedev/core";
-export type HouseRuntime = Awaited<ReturnType<typeof connectHouseBridge>["runtime"]>;
+export type HouseRuntime = Awaited<ReturnType<typeof houseBridge>["runtime"]>;
 export type HouseRoom = Awaited<ReturnType<HouseRuntime["rooms"]>>[number];
 export type Row = { id: string; _house?: Snapshot; [key: string]: any };
 export type Snapshot = {
@@ -180,7 +180,7 @@ export function readHR(result: any, room: string): Database {
 let connection: Promise<HouseRuntime> | undefined;
 export function houseRuntime(): Promise<HouseRuntime> {
   connection ??= (async () => {
-    const bridge = connectHouseBridge();
+    const bridge = houseBridge();
     bridge.setTab({ title: "HR" });
     return bridge.runtime;
   })().catch((error) => {
