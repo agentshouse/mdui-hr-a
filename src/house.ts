@@ -377,7 +377,7 @@ async function queueChanges(md: HouseRuntime, room: string, changes: Change[], o
   const result = await md.save(room, drafts);
   if (result.outcome !== "saved")
     fail(
-      `House did not queue this change: ${result.rule}. Drafts have been kept.`,
+      `House did not queue this change: ${result.code}. Drafts have been kept.`,
       result,
     );
   return result.identifier;

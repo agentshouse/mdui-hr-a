@@ -501,7 +501,7 @@ describe("mutations and exact bases", () => {
       opened = await getRequest(f);
     f.md.save.mockResolvedValueOnce({
       outcome: "refused",
-      rule: "conflict",
+      code: "conflict", retryable: false,
     } as any);
     await expect(update(f, opened, { status: "Approved" })).rejects.toThrow(
       "Drafts have been kept",

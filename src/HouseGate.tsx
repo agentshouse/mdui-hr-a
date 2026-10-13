@@ -59,6 +59,7 @@ export function HouseGate({ children }: PropsWithChildren) {
   const currentEmployee = employees.find((e) => e.id === employeeId);
   if (currentEmployee) retainedEmployee.current = {room, value: currentEmployee};
   const [queue, setQueue] = useState({
+    local: 0,
     waiting: 0,
     submitted: 0,
     accepted: 0,
@@ -116,7 +117,7 @@ export function HouseGate({ children }: PropsWithChildren) {
           setStorageWarning(value ?? ""),
         ),
         listen(observeConnectionRefusal(md), (value) =>
-          setRefused(value ? `House connection refused: ${value.reason}` : ""),
+          setRefused(value ? `House connection refused: ${value.code}` : ""),
         ),
       ]);
     }
@@ -169,7 +170,7 @@ export function HouseGate({ children }: PropsWithChildren) {
   );
 
   useEffect(() => {
-    setQueue({ waiting: 0, submitted: 0, accepted: 0, reset: 0 });
+    setQueue({ local: 0, waiting: 0, submitted: 0, accepted: 0, reset: 0 });
     setEmployees([]);
     setDatabase(null);
     setEmployeeId("");
@@ -214,7 +215,7 @@ export function HouseGate({ children }: PropsWithChildren) {
         }
       }),
       watch(observeQueue(runtime, room), (entries) => {
-        const summary = { waiting: 0, submitted: 0, accepted: 0, reset: 0 };
+        const summary = { local: 0, waiting: 0, submitted: 0, accepted: 0, reset: 0 };
         entries.forEach((entry) => {
           summary[entry.state]++;
         });

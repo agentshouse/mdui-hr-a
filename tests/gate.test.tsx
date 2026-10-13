@@ -224,7 +224,7 @@ describe("House status and Room gate", () => {
     expect(screen.getByText(/changes queue locally/)).toBeInTheDocument();
   });
   it("does not render private data when connection is refused", async () => {
-    test.observations.get("refusal").value = { reason: "not-admitted" };
+    test.observations.get("refusal").value = { code: "not-admitted", retryable: false };
     render(
       <HouseGate>
         <Child />

@@ -42,11 +42,11 @@ describe("local-first HR creation draft", () => {
     const {md, held, methods} = boundary();
     const first = await openTimeOffDraft(md, "r", "employee"); await first.write({notes: "Important"}); first.close();
     const [path, draft] = [...held][0];
-    held.set(path, {...draft, returned: {kind: "expired"}});
+    held.set(path, {...draft, returned: {kind: "expired", code: "expired", retryable: false, fields: {}}});
     const reopened = await openTimeOffDraft(md, "r", "employee");
     expect(reopened.fields().notes).toBe("Important");
     await reopened.write({notes: "Reviewable revision"});
-    expect(held.get(path)?.returned).toEqual({kind: "expired"});
+    expect(held.get(path)?.returned).toEqual({kind: "expired", code: "expired", retryable: false, fields: {}});
     expect(methods.save).not.toHaveBeenCalled();
     reopened.close();
     expect(methods.roomDraft.discard).not.toHaveBeenCalled();
